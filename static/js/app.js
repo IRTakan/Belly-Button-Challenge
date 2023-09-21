@@ -33,6 +33,7 @@ dataPromise.then(data => {
     // Show information and charts for the initial sample
     buildMetadata(initialSample, data);
     buildCharts(initialSample, data);
+    buildBubbleChart(initialSample, data);
 });
 
 // This function runs when the user selects a new sample from the dropdown menu
@@ -41,6 +42,7 @@ function optionChanged(newSample) {
     dataPromise.then(data => {
         buildMetadata(newSample, data);
         buildCharts(newSample, data);
+        buildBubbleChart(newSample, data);
     });
 }
 
@@ -100,7 +102,7 @@ function buildCharts(sample) {
             orientation: "h"
         };
 
-        // Setup layout
+        // Layout setup
         let layout = {
             margin: {
                 l: 100,
@@ -117,3 +119,55 @@ function buildCharts(sample) {
     });
 };
 
+// Function that builds the bubble chart
+function buildBubbleChart(sample) {
+
+    // Use D3 library to retrieve all of the data
+    d3.json(url).then((data) => {
+        
+        // Retrieve all sample data
+        let sampleInfo = data.samples;
+
+        // Filter based on the value of the sample
+        let value = sampleInfo.filter(result => result.id == sample);
+
+        // Get the first index from the array
+        let valueData = value[0];
+
+        // Get the otu_ids, lables, and sample values
+        let otu_ids = valueData.otu_ids;
+        let otu_labels = valueData.otu_labels;
+        let sample_values = valueData.sample_values;
+
+        // Log the data to the console
+        console.log(otu_ids,otu_labels,sample_values);
+        
+        // Set up the trace for bubble chart
+        let trace1 = {
+            x: otu_ids,
+            y: sample_values,
+            text: otu_labels,
+            mode: "markers",
+            marker: {
+                size: sample_values,
+                color: otu_ids,
+                colorscale: "Earth"
+            }
+        };
+
+        // Layout setup
+        let layout = {
+        xaxis: {title: "OTU ID"},
+        margin: {
+            l: 100,
+            r: 100,
+            t: 0,
+            b: 100,
+        },
+        height: 470,
+        width: 1100,
+    };
+        // Call Plotly to plot the bubble chart
+        Plotly.newPlot("bubble", [trace1], layout)
+    });
+};
