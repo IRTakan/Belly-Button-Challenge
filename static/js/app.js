@@ -14,10 +14,10 @@ d3.json(url).then(function(data) {
 // Initialize the dashboard
 dataPromise.then(data => {
     // Use D3 library to select the dropdown menu
-    var selector = d3.select("#selDataset");
+    let selector = d3.select("#selDataset");
 
     // Use D3 library to get sample names and populate the drop-down selector
-    var sampleNames = data.names;
+    let sampleNames = data.names;
 
     // Add the sample names to the dropdown menu options
     sampleNames.forEach(sample => {
@@ -28,12 +28,13 @@ dataPromise.then(data => {
     });
         
     // Set the first sample from the list
-    var initialSample = sampleNames[0];
+    let initialSample = sampleNames[0];
 
     // Show information and charts for the initial sample
     buildMetadata(initialSample, data);
     buildCharts(initialSample, data);
     buildBubbleChart(initialSample, data);
+    buildGauge(initialSample, data)
 });
 
 // This function runs when the user selects a new sample from the dropdown menu
@@ -43,18 +44,19 @@ function optionChanged(newSample) {
         buildMetadata(newSample, data);
         buildCharts(newSample, data);
         buildBubbleChart(newSample, data);
+        buildGauge(newSample, data)
     });
 }
 
 // This function shows the demographic information for the selected sample
 function buildMetadata(sample, data) {
     // Get the metadata for all samples
-    var metadata = data.metadata;
+    let metadata = data.metadata;
 
-    // Filters the metadata to only include the selected sample
-    var metadataArray = metadata.filter(sampleObj => sampleObj.id == sample);
-    var selectedSample = metadataArray[0];
-    var PANEL = d3.select("#sample-metadata");
+    // Filter the metadata to only include the selected sample
+    let metadataArray = metadata.filter(sampleObj => sampleObj.id == sample);
+    let selectedSample = metadataArray[0];
+    let PANEL = d3.select("#sample-metadata");
 
     // Clears the previous demographic information
     PANEL.html("");
@@ -170,4 +172,4 @@ function buildBubbleChart(sample) {
         // Call Plotly to plot the bubble chart
         Plotly.newPlot("bubble", [trace1], layout)
     });
-};
+}
