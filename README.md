@@ -46,9 +46,11 @@ To achieve this I had to:
 
 - BONUS: Gauge Washer
 
--- Create a gauage washer for values ranging from 0 through 9. Update the chart whenever a new sample is selected
+-- Create a gauage washer for values ranging from 0 through 9. Update the chart whenever a new sample is selected.
 
 <img src="https://github.com/IRTakan/Belly-Button-Challenge/blob/main/images/bellyb4.png?raw=true" width=320 height=200>
 
-*Technologies used: Microsoft Excel
+*Technologies used: Microsoft Visual Studio Code.
+
+*Languages used: JavaScript & HTML.
 
