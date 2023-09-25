@@ -8,7 +8,11 @@ more than 70% of people, while the rest were relatively rare.
 
 <img src="https://github.com/IRTakan/Belly-Button-Challenge/blob/main/images/bellyb5.png?raw=true" width=400 height=400>
 
-To built an interactive dashboard, I had to:
+- Deployment
+
+-- Link to dashboard: https://irtakan.github.io/Belly-Button-Challenge/
+
+To built my interactive dashboard, I had to:
 
  -- Use the D3 library to read in samples.json from the URL https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json.
 
