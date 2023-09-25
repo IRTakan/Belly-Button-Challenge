@@ -1,5 +1,9 @@
 # Belly-Button-Challenge
 
+- Deployment
+
+-- Link to dashboard: https://irtakan.github.io/Belly-Button-Challenge/
+
 For this challenge I built an interactive dashboard that explores the Belly Button Biodiversity datasetLinks to an external site., 
 which catalogs the microbes that colonize human navels.
 
@@ -7,10 +11,6 @@ The dataset reveals that a small handful of microbial species (also called opera
 more than 70% of people, while the rest were relatively rare.
 
 <img src="https://github.com/IRTakan/Belly-Button-Challenge/blob/main/images/bellyb5.png?raw=true" width=400 height=400>
-
-- Deployment
-
--- Link to dashboard: https://irtakan.github.io/Belly-Button-Challenge/
 
 To built my interactive dashboard, I had to:
 
