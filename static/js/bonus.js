@@ -3,7 +3,7 @@
 function buildGauge(sample) {
     // Fetch the JSON data and console log it 
     d3.json(url).then((data) => {
-        // An array of metadata objects
+        // Get the metadata for all samples
         let metadata = data.metadata;
         
         // Filter the metadata to only include the selected sample
