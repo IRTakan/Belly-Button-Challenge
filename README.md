@@ -3,12 +3,12 @@
 For this challenge I built an interactive dashboard that explores the Belly Button Biodiversity datasetLinks to an external site., 
 which catalogs the microbes that colonize human navels.
 
-The dataset revealed that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in
+The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in
 more than 70% of people, while the rest were relatively rare.
 
 <img src="https://github.com/IRTakan/Belly-Button-Challenge/blob/main/images/bellyb5.png?raw=true" width=400 height=400>
 
-To achieve this I had to:
+To built an interactive dashboard, I had to:
 
  -- Use the D3 library to read in samples.json from the URL https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json.
 
