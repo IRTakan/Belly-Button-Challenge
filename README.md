@@ -1,10 +1,12 @@
 # Belly-Button-Challenge
 
-In this challenge I built an interactive dashboard that explores the Belly Button Biodiversity datasetLinks to an external site., 
+For this challenge I built an interactive dashboard that explores the Belly Button Biodiversity datasetLinks to an external site., 
 which catalogs the microbes that colonize human navels.
 
-The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in
+The dataset revealed that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in
 more than 70% of people, while the rest were relatively rare.
+
+<img src="https://github.com/IRTakan/Belly-Button-Challenge/blob/main/images/bellyb5.png?raw=true" width=400 height=400>
 
 To achieve this I had to:
 
@@ -18,7 +20,7 @@ To achieve this I had to:
 
 -- Use otu_labels as the hovertext for the chart.
 
-- Bar Chart
+<img src="https://github.com/IRTakan/Belly-Button-Challenge/blob/main/images/bellyb1.jpg?raw=true" width=400 height=300>
 
 --Create a bubble chart that displays each sample.
 
@@ -32,7 +34,7 @@ To achieve this I had to:
 
 --Use otu_labels for the text values.
 
-- Bubble Chart
+<img src="https://github.com/IRTakan/Belly-Button-Challenge/blob/main/images/bellyb2.jpg?raw=true" width=600 height=200>
 
 --Display the sample metadata, i.e., an individual's demographic information.
 
@@ -40,9 +42,13 @@ To achieve this I had to:
 
 --Update all the plots when a new sample is selected.
 
+<img src="https://github.com/IRTakan/Belly-Button-Challenge/blob/main/images/bellyb3.jpg?raw=true" width=150 height=200>
+
 - BONUS: Gauge Washer
 
 -- Create a gauage washer for values ranging from 0 through 9. Update the chart whenever a new sample is selected
+
+<img src="https://github.com/IRTakan/Belly-Button-Challenge/blob/main/images/bellyb4.png?raw=true" width=320 height=200>
 
 *Technologies used: Microsoft Excel
 
